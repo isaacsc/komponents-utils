@@ -1,0 +1,177 @@
+<dom-module id="kr-page">
+  <template>
+    <style>
+      :host {
+        contain: layout;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 16px;
+        min-height: calc(100vh - 64px - 16px);
+        overflow-y: auto;
+        position: relative;
+        box-sizing: border-box;
+        background: var(--kairo-page-background, #dee7ea);
+        padding: 0;
+        margin: 0;
+        will-change: opacity;
+      }
+
+      :host:before {
+        content: ' ';
+        width: 100%;
+        height: 96px;
+        background: var(--kairos-orange);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      :host([hidden]) {
+        display: none !important;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      .page-limit {
+        max-width: 960px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      .page-bg {
+        background-color: #fff;
+        min-height:100%;
+      }
+
+      .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+      }
+
+      .page-title,
+      .page-title h1 {
+        line-height: 1.1;
+        font-weight: lighter;
+        font-size: 2.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #fff;
+        margin: 26px 0 20px;
+        padding: 0;
+        border: 0;
+        outline: 0;
+      }
+
+      .page-title h1 {
+        color: inherit;
+      }
+
+      .page-wrapper {
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+
+      @media (max-width: 720px) {
+        .page-title{
+          font-size: 1.8rem;
+          padding: 0 16px;
+        }
+      }
+
+      @media (min-width: 720px) {
+        .page-bg {
+          border-radius: 2px;
+        }
+      }
+
+      a {
+        color: var(--kairos-orange);
+        text-decoration: none;
+      }
+
+      .main-card {
+        margin-top: 1px;
+        margin-bottom: 1px;
+      }
+
+      .main-card {
+        padding: calc( 2 * var(--grid-gap-size) ) calc( 3 * var(--grid-gap-size) );
+        background-color: #fff;
+        box-sizing: border-box;
+      }
+
+      @media (min-width: 830px) {
+
+        .main-card {
+          border-radius: 2px;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        .two-columns .column > .main-card {
+          margin-bottom: calc( 2 * var(--grid-gap-size) );
+        }
+
+        .two-columns {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .two-columns + .two-columns {
+          margin-top: calc( 2 * var(--grid-gap-size) );
+        }
+
+        .two-columns > .column {
+          flex: 1;
+        }
+
+        .two-columns > .column:last-child {
+          flex: 2;
+        }
+
+        .two-columns > :last-child {
+          margin-left: calc(2 * var(--grid-gap-size));
+        }
+
+        .two-columns .column.column_2 {
+          flex: 2;
+        }
+        
+        .two-columns .column.column_3 {
+          flex: 3;
+        }
+
+        .two-columns .column.column_4 {
+          flex: 4;
+        }
+
+      }
+
+      .main-card-position {
+        position: relative;
+      }
+
+      .main-card__btn-menu {
+        position: absolute;
+        top: var(--grid-gap-size);
+        right: 0;
+      }
+
+      .main-card__btn-menu a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+
+      dom-if, dom-repeat {
+        display: none;
+      }
+
+    </style>
+  </template>
+</dom-module>

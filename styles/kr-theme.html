@@ -1,0 +1,146 @@
+<custom-style>
+  <style>
+    :root {
+
+      /* ------------------------------------------------------
+      * Colors
+      * ------------------------------------------------------ */
+
+      /* Accent */
+      --kairos-orange: #FF8300;
+      --kairos-orange-dark: #D36B00;
+
+      /* Text */
+      --text-dark: #191919;
+      --text-medium: rgba(0,0,0,0.74);
+      --text-light: rgba(0,0,0,0.6);
+
+      /* Backgrounds */
+      --blue-gray: #dee7ea;
+      --blue-gray-dark: #c7d6db;
+      --blue-gray-light: rgba(222, 231, 234, 0.4);
+
+      /* Tags / Other */
+      --yellow: #ffd207;
+      --deeppink: #e91e63;
+      --darkcyan: #607d8b;
+      --green: #8bc34a;
+      --blue: #2196f3;
+      --brown: #795548;
+
+      --color-uxdesign: var(--yellow);
+      --color-development: var(--deeppink);
+      --color-talentmarkcom: var(--darkcyan);
+      --color-devops: var(--green);
+      --color-digitalproductdevelopment: var(--blue);
+      --color-operations: var(--kairos-orange);
+
+
+      /* ------------------------------------------------------
+      * Typography
+      * ------------------------------------------------------ */
+
+      /* Text styles */
+      --body-text: {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        color: var(--text-medium);
+      };
+
+      /* Text sizes */
+      --text-md: { font-size: 1.5rem; };
+      --text-sm: { font-size: 1.3rem; };
+
+
+      /* ------------------------------------------------------
+      * Decorators
+      * ------------------------------------------------------ */
+
+      /* Borders */
+      --separator: 1px solid #ECF2F8;
+
+      /* Utils */
+      --grid-gap-size: 8px;
+
+
+      /* ------------------------------------------------------
+      * Utilities
+      * ------------------------------------------------------ */
+      --sr-only: {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+      };
+
+      /* ------------------------------------------------------
+      * Shared styles
+      * ------------------------------------------------------ */
+      [hidden] { display: none !important; }
+
+
+      /* ------------------------------------------------------
+      * Components
+      * ------------------------------------------------------ */
+
+      --krp-btn: {
+        font-family: inherit;
+        display: inline-block;
+        margin: 0;
+        padding: 0 16px;
+        border: 0;
+        outline: none;
+        font-size: 1.3rem;
+        font-weight: bold;
+        height: 3.2rem;
+        line-height: 3.2rem;
+        overflow: hidden;
+        outline-width: 2px;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        border-radius: 1.6rem;
+        cursor: pointer;
+        overflow: visible;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      };
+
+      --krp-btn-ff-normalize: {
+        padding: 0;
+        border: 0;
+      };
+
+      /* Buttons */
+      --krp-btn-gray: {
+        color: var(--text-light);
+        background-color: var(--blue-gray-light);
+      };
+
+      --krp-btn-gray--hover: {
+        background-color: var(--blue-gray-dark);
+      };
+
+      --krp-btn-orange: {
+        color: rgba(255,255,255,0.9);
+        background-color: var(--kairos-orange);
+      };
+
+
+      /* Polymer / Other */
+      --paper-item: {
+        font-size: 1.4rem;
+      };
+
+      paper-item-body {
+        --paper-item-body-secondary-color: var(--text-light);
+      };
+    }
+  </style>
+</custom-style>
